@@ -123,10 +123,6 @@ void MainWindow::createActions()
     printAct->setShortcuts(QKeySequence::Print);
     connect(printAct, &QAction::triggered, this, &MainWindow::print);
 
-    // Remove or comment out exit action
-    // exitAct = new QAction(tr("E&xit"), this);
-    // exitAct->setShortcuts(QKeySequence::Quit);
-    // connect(exitAct, &QAction::triggered, this, &QWidget::close);
 
     // Edit actions
     cutAct = new QAction(tr("Cu&t"), this);
@@ -170,9 +166,7 @@ void MainWindow::createMenus()
     fileMenu->addAction(saveAsAct);
     fileMenu->addSeparator();
     fileMenu->addAction(printAct);
-    // Remove exit action from menu
-    // fileMenu->addSeparator();
-    // fileMenu->addAction(exitAct);
+
 
     QMenu *editMenu = menuBar()->addMenu(tr("&Edit"));
     editMenu->addAction(undoAct);
